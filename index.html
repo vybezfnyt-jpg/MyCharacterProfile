@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kendrick // Dual-Cert Master Mechanic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-amber: #ffb300;
+            --dark-steel: #0f1215;
+            --oil-black: #050505;
+        }
+
+        body {
+            background-color: var(--oil-black);
+            color: #d1d5db;
+            font-family: 'JetBrains+Mono', monospace;
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(255,179,0,0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+
+        .ar-overlay {
+            border: 1px solid rgba(255, 179, 0, 0.3);
+            background: rgba(15, 18, 21, 0.8);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ar-overlay::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--neon-amber);
+            opacity: 0.5;
+            animation: scan 4s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+
+        .glitch-text {
+            color: var(--neon-amber);
+            text-shadow: 2px 0px rgba(255,0,0,0.5), -2px 0px rgba(0,0,255,0.5);
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .status-light {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            box-shadow: 0 0 8px currentColor;
+        }
+
+        .mesh-net-active { color: #00ff41; }
+        .global-web-disconnected { color: #ff3e3e; }
+
+        .black-book-card {
+            background: #1a1a1a;
+            border-left: 4px solid var(--neon-amber);
+        }
+
+        .tactile-btn {
+            background: #2a2a2a;
+            border: 1px solid #444;
+            transition: all 0.2s;
+        }
+
+        .tactile-btn:active {
+            transform: translateY(2px);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Header Section -->
+    <header class="max-w-5xl mx-auto mb-12">
+        <div class="flex flex-col md:flex-row justify-between items-end gap-4 border-b border-amber-900/50 pb-6">
+            <div>
+                <h1 class="text-4xl font-bold glitch-text tracking-tighter uppercase">Kendrick [Redacted]</h1>
+                <p class="text-amber-500/70 text-sm mt-2">ID: TX-DFW-882-MASTER-MECH</p>
+            </div>
+            <div class="text-right">
+                <div class="text-xs space-y-1">
+                    <div><span class="status-light mesh-net-active"></span> LOCAL MESH-NET: VERIFIED</div>
+                    <div><span class="status-light global-web-disconnected"></span> GLOBAL WEB: FIREWALLED</div>
+                    <div class="mt-2 text-gray-500">YEAR: 2040 | AGE: 32</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Sidebar: The Gear -->
+        <div class="space-y-6">
+            <section class="ar-overlay p-6 rounded-lg">
+                <h2 class="text-amber-500 font-bold mb-4 uppercase text-xs tracking-widest border-b border-amber-900/30 pb-2">Auggie HUD Status</h2>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-xs mb-1">
+                            <span>AI-DIAGNOSTIC FILTER</span>
+                            <span class="text-amber-500">50%</span>
+                        </div>
+                        <div class="w-full bg-gray-800 h-1.5 rounded-full">
+                            <div class="bg-amber-500 h-1.5 rounded-full" style="width: 50%"></div>
+                        </div>
+                        <p class="text-[10px] text-gray-500 mt-2 italic font-mono uppercase">
+                            // Warning: Hallucination mitigation active. Ignoring "Ghost" part failure warnings.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-800">
+                        <p class="text-xs text-gray-400">HARDWARE ENCRYPTION:</p>
+                        <p class="text-sm font-bold text-gray-200">Tactile Torque Wrenches <span class="text-[10px] bg-green-900/30 text-green-500 px-2 rounded">NO-WIFI</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-amber-900/10 p-6 rounded-lg border border-amber-900/20">
+                <h2 class="text-amber-500 font-bold mb-4 uppercase text-xs">Human Protocol</h2>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-red-900/20 p-2 rounded border border-red-900/50">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11l4 0" />
+                            <line x1="6" y1="6" x2="18" y2="18" stroke="red" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <span class="text-sm font-bold">LUNCH NO-SCREEN POLICY</span>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                    "If you want to talk to me, you do it over a real sandwich. No VR-pings in the hangar."
+                </p>
+            </section>
+        </div>
+
+        <!-- Center: Career & Mission -->
+        <div class="md:col-span-2 space-y-8">
+            <section class="relative">
+                <div class="absolute -top-4 -left-4 text-6xl opacity-10 font-bold uppercase">Work</div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <span class="w-8 h-px bg-amber-500"></span>
+                    Operational Expertise
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-[#111] p-5 rounded border border-gray-800 hover:border-amber-600 transition-colors">
+                        <h3 class="text-amber-500 font-bold">"Legacy" ICE</h3>
+                        <p class="text-xs text-gray-400 mt-2">Specialist in pre-electric internal combustion engines. Known for feeling timing issues before the sensors do.</p>
+                    </div>
+                    <div class="bg-[#111] p-5 rounded border border-gray-800 hover:border-amber-600 transition-colors">
+                        <h3 class="text-amber-500 font-bold">eVTOL 1st-Gen</h3>
+                        <p class="text-xs text-gray-400 mt-2">Autonomous aircraft airframe and propulsion maintenance. Certified for Aero-Hub Dallas/Fort Worth.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <span class="w-8 h-px bg-amber-500"></span>
+                    The Black Books
+                </h2>
+                <div class="space-y-4">
+                    <div class="black-book-card p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-bold text-gray-200 uppercase">Physical Manual: 2024 V-Series Engine</h4>
+                                <p class="text-xs text-amber-600">VERIFIED DATA - PRINTED 2029</p>
+                            </div>
+                            <span class="text-[10px] bg-gray-800 px-2 py-1">NON-DIGITAL</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mt-3 leading-relaxed">
+                            Bypassing the "Dead Internet" SEO junk. No AI-generated spark plug gaps here. Just ink, paper, and grease stains.
+                        </p>
+                    </div>
+                    
+                    <div class="p-4 border border-dashed border-gray-700 bg-gray-900/30">
+                        <div class="flex items-center gap-4">
+                            <div class="h-12 w-12 bg-amber-500/20 flex items-center justify-center text-amber-500 font-bold rounded">
+                                SV
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold">Private Server: Garage-Mesh</h4>
+                                <p class="text-[10px] text-gray-500">Status: Air-Gapped. Only confirmed truth allowed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Location/Vibe -->
+            <section class="bg-[#0a0a0a] p-8 rounded-xl border border-gray-900 flex flex-col items-center text-center">
+                <div class="text-amber-500/20 mb-4 uppercase tracking-[0.5em] text-sm">Hangar Location</div>
+                <h3 class="text-xl font-mono">Fort Worth-Dallas "Aero-Hub"</h3>
+                <p class="text-gray-500 text-xs mt-2 max-w-sm">
+                    In the shadows of the vertiports where the drones never stop humming, but the grease under my fingernails is real.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="max-w-5xl mx-auto mt-16 pb-8 text-center border-t border-gray-900 pt-8">
+        <p class="text-[10px] text-gray-600 uppercase tracking-widest">
+            &copy; 2040 Kendrick // Secured by Local Mesh-Net // No Cookies. No Trackers. No Subscriptions.
+        </p>
+    </footer>
+
+</body>
+</html>
